@@ -27,6 +27,10 @@ n = 1:10
 p = 0.001
 #p = 0.01
 
+# partial second order
+# an2 + b
+#p = 
+
 #data <- th
 
 # filter missing values
