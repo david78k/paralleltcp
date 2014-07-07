@@ -80,7 +80,7 @@ genplot <- function (type) {
 	#print(df)
 	
 	data <- getthroughput(p)
-	ylim <- range(data)
+#	ylim <- range(data)
 #	print (ylim)
 #	print (ylim[0])
 
