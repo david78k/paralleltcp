@@ -24,8 +24,8 @@ c = sqrt(3/2)
 #c = 1.22 
 n = 1:10
 # packet loss rate
-#p = 0.001
-p = 0.01
+p = 0.001
+#p = 0.01
 
 #data <- th
 
@@ -45,7 +45,7 @@ require(devEMF)
 
 # aggregate throughput
 getthroughput <- function (p) {
-	print (p)
+#	print (p)
 	return (c*MSS*n/(RTT * sqrt(p)))
 }
 
@@ -96,7 +96,8 @@ genplot <- function (type) {
 	#	ylim = c(0, ylim[2])
 	)
 
-	p = 0.001	
+	#p = 0.001	
+	p = 0.01
 	data <- getthroughput(p)
 	points(data, type = "l")
 }
