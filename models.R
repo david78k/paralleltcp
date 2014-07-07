@@ -15,6 +15,17 @@ fheight = 200
 fwidth = 300
 #fwidth = 400
 
+# in ms
+RTT = 180
+MSS = 1500
+c = 1.22
+n = 1:10
+p = 0.001
+
+th = c*MSS*n/(RTT * p)
+
+data <- th
+
 # filter missing values
 #data <- read.table(src, na.strings = "NA", fill = TRUE, header=1)
 #data <- read.table(src, na.strings = "NA", fill = TRUE)
