@@ -22,7 +22,9 @@ MSS = 1500
 c = sqrt(3/2)
 #c = 1.22 
 n = 1:10
-p = 0.001
+# packet loss rate
+#p = 0.001
+p = 0.01
 
 # aggregate throughput
 th = c*MSS*n/(RTT * sqrt(p))
