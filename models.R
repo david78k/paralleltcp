@@ -6,7 +6,7 @@
 #prefix = src
 prefix = "models"
 
-xlabel = "VM WINDOW"
+xlabel = "NUMBER OF PARALLEL STREAMS"
 ylabel = "THROUGHPUT (MB/S)"
 
 # figure size in pixel
@@ -18,10 +18,13 @@ fwidth = 300
 # in ms
 RTT = 180
 MSS = 1500
-c = 1.22
+# sqrt(3/2)
+c = sqrt(3/2)
+#c = 1.22 
 n = 1:10
 p = 0.001
 
+# aggregate throughput
 th = c*MSS*n/(RTT * sqrt(p))
 
 data <- th
