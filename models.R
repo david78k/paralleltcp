@@ -22,7 +22,7 @@ c = 1.22
 n = 1:10
 p = 0.001
 
-th = c*MSS*n/(RTT * p)
+th = c*MSS*n/(RTT * sqrt(p))
 
 data <- th
 
