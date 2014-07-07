@@ -97,7 +97,7 @@ genplot <- function (type) {
 
 	p = 0.001	
 	data <- getthroughput()
-	points(data)
+	points(data, type = "l")
 }
 
 genplot("png")
