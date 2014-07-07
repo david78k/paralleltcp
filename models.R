@@ -7,7 +7,8 @@
 prefix = "models"
 
 xlabel = "NUMBER OF PARALLEL STREAMS"
-ylabel = "THROUGHPUT (MB/S)"
+ylabel = "THROUGHPUT (Mbps)"
+#ylabel = "THROUGHPUT (MB/S)"
 
 # figure size in pixel
 fheight = 200
