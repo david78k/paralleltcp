@@ -27,10 +27,7 @@ n = 1:10
 #p = 0.001
 p = 0.01
 
-# aggregate throughput
-th = c*MSS*n/(RTT * sqrt(p))
-
-data <- th
+#data <- th
 
 # filter missing values
 #data <- read.table(src, na.strings = "NA", fill = TRUE, header=1)
@@ -45,6 +42,11 @@ data <- th
 #print(data)
 
 require(devEMF)
+
+# aggregate throughput
+getthroughput <- function () {
+	return (c*MSS*n/(RTT * sqrt(p)))
+}
 
 genplot <- function (type) {
         #rm(list = ls())      # Clear all variables
@@ -76,6 +78,7 @@ genplot <- function (type) {
 	
 	#print(df)
 	
+	data <- getthroughput()
 	ylim <- range(data)
 #	print (ylim)
 #	print (ylim[0])
@@ -85,12 +88,16 @@ genplot <- function (type) {
 	plot(data,
 		las = 1, 
 		xlab = xlabel,
-		ylab = ylabel,
+		ylab = ylabel
 		#names = c("1", "2", "3", "4", "5", "6", "7", "8"),
 			#"9", "10", "12", "14", "16", "18", "20", "30", 
 			#"40", "50", "60", "70", "80", "90", "100"),
-		ylim = c(0, ylim[2])
+	#	ylim = c(0, ylim[2])
 	)
+
+	p = 0.001	
+	data <- getthroughput()
+	points(data)
 }
 
 genplot("png")
