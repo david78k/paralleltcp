@@ -44,7 +44,8 @@ p = 0.01
 require(devEMF)
 
 # aggregate throughput
-getthroughput <- function () {
+getthroughput <- function (p) {
+	print (p)
 	return (c*MSS*n/(RTT * sqrt(p)))
 }
 
@@ -78,7 +79,7 @@ genplot <- function (type) {
 	
 	#print(df)
 	
-	data <- getthroughput()
+	data <- getthroughput(p)
 	ylim <- range(data)
 #	print (ylim)
 #	print (ylim[0])
@@ -96,7 +97,7 @@ genplot <- function (type) {
 	)
 
 	p = 0.001	
-	data <- getthroughput()
+	data <- getthroughput(p)
 	points(data, type = "l")
 }
 
