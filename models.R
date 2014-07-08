@@ -22,7 +22,7 @@ MSS = 1500
 # sqrt(3/2)
 c = sqrt(3/2)
 #c = 1.22 
-n = 1:10
+n = 1:100
 # packet loss rate
 #p = 0.001
 #p = 0.01
