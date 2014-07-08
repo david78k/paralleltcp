@@ -17,7 +17,7 @@ fwidth = 300
 #fwidth = 400
 
 # in ms
-RTT = 180
+RTT = 190
 MSS = 1500
 # sqrt(3/2)
 c = sqrt(3/2)
@@ -58,7 +58,8 @@ require(devEMF)
 getthroughput <- function (p) {
 	p = a*(n^2)+b
 #	print (p)
-	return (c*MSS*n/(RTT * sqrt(p)))
+	return (n/sqrt(p))
+	#return (c*MSS*n/(RTT * sqrt(p)))
 }
 
 genplot <- function (type) {
