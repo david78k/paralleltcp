@@ -26,9 +26,13 @@ n = 1:10
 # packet loss rate
 #p = 0.001
 #p = 0.01
+n1 = 1
+n2 = 10
+Th1 = 100
+Th2 = 350
 a = ((n1^2/Th1^2) - (n2^2/Th2^2))/(n1^2 - n2^2)
 b = (n1^2/Th1^2) - a*(n1^2)
-p = a*(n^2)+b
+#p = a*(n^2)+b
 
 # partial second order
 # an2 + b
@@ -52,6 +56,7 @@ require(devEMF)
 
 # aggregate throughput
 getthroughput <- function (p) {
+	p = a*(n^2)+b
 #	print (p)
 	return (c*MSS*n/(RTT * sqrt(p)))
 }
