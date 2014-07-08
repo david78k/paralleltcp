@@ -24,8 +24,11 @@ c = sqrt(3/2)
 #c = 1.22 
 n = 1:10
 # packet loss rate
-p = 0.001
+#p = 0.001
 #p = 0.01
+a = ((n1^2/Th1^2) - (n2^2/Th2^2))/(n1^2 - n2^2)
+b = (n1^2/Th1^2) - a*(n1^2)
+p = a*(n^2)+b
 
 # partial second order
 # an2 + b
