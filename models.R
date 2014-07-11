@@ -95,7 +95,7 @@ genplot <- function (type) {
 	p = a*(n^2)+b
 
 	data <- getthroughput(p)
-#	ylim <- range(data)
+	ylim <- range(data)
 #	print (ylim)
 #	print (ylim[0])
 
@@ -108,7 +108,7 @@ genplot <- function (type) {
 		#names = c("1", "2", "3", "4", "5", "6", "7", "8"),
 			#"9", "10", "12", "14", "16", "18", "20", "30", 
 			#"40", "50", "60", "70", "80", "90", "100"),
-	#	ylim = c(0, ylim[2])
+		,ylim = c(0, ylim[2])
 	)
 
 	# add individual throughput divided total throughput by n
