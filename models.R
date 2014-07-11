@@ -11,10 +11,10 @@ ylabel = "THROUGHPUT (Mbps)"
 #ylabel = "THROUGHPUT (MB/S)"
 
 # figure size in pixel
-fheight = 200
-#fheight = 300
-fwidth = 300
-#fwidth = 400
+#fheight = 200
+fheight = 300
+#fwidth = 300
+fwidth = 400
 
 # in ms
 RTT = 190
