@@ -56,7 +56,6 @@ require(devEMF)
 
 # aggregate throughput
 getthroughput <- function (p) {
-	p = a*(n^2)+b
 #	print (p)
 	return (n/sqrt(p))
 	#return (c*MSS*n/(RTT * sqrt(p)))
@@ -92,6 +91,9 @@ genplot <- function (type) {
 	
 	#print(df)
 	
+	# packet loss rate
+	p = a*(n^2)+b
+
 	data <- getthroughput(p)
 #	ylim <- range(data)
 #	print (ylim)
@@ -109,6 +111,7 @@ genplot <- function (type) {
 	#	ylim = c(0, ylim[2])
 	)
 
+	# add individual throughput divided total throughput by n
 	#p = 0.001	
 	p = 0.01
 	data <- getthroughput(p)
