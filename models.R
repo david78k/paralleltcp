@@ -104,7 +104,9 @@ genplot <- function (type) {
 	plot(data,
 		las = 1, 
 		xlab = xlabel,
-		ylab = ylabel
+		ylab = ylabel,
+		type = "b",
+		lty = 2
 		#names = c("1", "2", "3", "4", "5", "6", "7", "8"),
 			#"9", "10", "12", "14", "16", "18", "20", "30", 
 			#"40", "50", "60", "70", "80", "90", "100"),
@@ -118,7 +120,8 @@ genplot <- function (type) {
 	points(data/n, type = "l")
 
 	# sum of normalized throughputs
-	lines(data + data/n, type = "b", lty = 3, pch = 8)
+	lines(data + data/n, type = "b", lty = 3)
+	#lines(data + data/n, type = "b", lty = 3, pch = 8)
 }
 
 genplot("png")
