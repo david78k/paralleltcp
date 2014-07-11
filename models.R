@@ -113,9 +113,9 @@ genplot <- function (type) {
 
 	# add individual throughput divided total throughput by n
 	#p = 0.001	
-	p = 0.01
-	data <- getthroughput(p)
-	points(data, type = "l")
+	#p = 0.01
+	#data <- getthroughput(p)
+	points(data/n, type = "l")
 }
 
 genplot("png")
