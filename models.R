@@ -95,7 +95,7 @@ genplot <- function (type) {
 	p = a*(n^2)+b
 
 	data <- getthroughput(p)
-	ylim <- range(data)
+	ylim <- range(data + data/n)
 #	print (ylim)
 #	print (ylim[0])
 
@@ -118,7 +118,7 @@ genplot <- function (type) {
 	points(data/n, type = "l")
 
 	# sum of normalized throughputs
-	lines(data + data/n, type = "b")
+	lines(data + data/n, type = "b", lty = 3)
 }
 
 genplot("png")
