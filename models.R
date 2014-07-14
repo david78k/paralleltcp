@@ -122,6 +122,19 @@ genplot <- function (type) {
 	# sum of normalized throughputs
 	lines(data + data/n, type = "l", lty = 3)
 	#lines(data + data/n, type = "b", lty = 3, pch = 8)
+
+	# Add a legend to the plot
+        legend("right",                       # x-y coordinates for location of the legend
+               legend=c(paste("a=", a), paste("b=", b)),      # Legend labels
+               #col=c(secondlc),   # Color of points or lines
+        #       col=c("black", secondlc),   # Color of points or lines
+              #pch=c(NA,20),                 # Point type
+              #pch=c(21,19),                 # Point type
+               #lty=c(secondlty),                    # Line type
+               #lwd=c(secondlwd),                    # Line width
+        #       cex = fontsize,
+                #bty = 'n'
+        )
 }
 
 genplot("png")
