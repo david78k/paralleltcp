@@ -34,7 +34,7 @@ a = ((n1^2/Th1^2) - (n2^2/Th2^2))/(n1^2 - n2^2)
 b = (n1^2/Th1^2) - a*(n1^2)
 #p = a*(n^2)+b
 
-print(a, b)
+cat(a, b, "\n")
 
 # partial second order
 # an2 + b
